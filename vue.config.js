@@ -1,4 +1,4 @@
-console.log(process.env)
+// console.log(process.env)
 var multiPage = require('./multiPage.js');
 module.exports = {
 	publicPath: '/',
