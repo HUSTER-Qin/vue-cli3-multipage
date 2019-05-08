@@ -83,7 +83,6 @@ exports.getProdHtmlWebpackPluginList = function getProdHtmlWebpackPluginList(){
 //   if(!pa){
 //     throw '读取文件错误'
 //   }
-	console.log(moduleList);
   moduleList.forEach(function (mod) {
     //生成配置
     var conf = {
@@ -103,7 +102,6 @@ exports.getProdHtmlWebpackPluginList = function getProdHtmlWebpackPluginList(){
       chunksSortMode: 'dependency',
       chunks: ['manifest','vendor',mod.moduleID]
     }
-    // console.log(conf)
     //添加HtmlWebpackPlugin对象
     prodHtmlWebpackPluginList.push(new HtmlWebpackPlugin(conf))
   })

@@ -1,12 +1,10 @@
-var multipageHelper = require('./multipage-helper.js');
-console.log(multipageHelper.getEntries());
-console.log(multipageHelper.getProdHtmlWebpackPluginList());
+console.log(process.env)
+var multiPage = require('./multiPage.js');
 module.exports = {
-	
 	publicPath: '/',
-	pages: multipageHelper.getEntries(), //设置入口集合,
+	pages: multiPage.getEntries(), //设置入口集合,
 	// outputDir: 'dist',
     configureWebpack: {
-        plugins: multipageHelper.getProdHtmlWebpackPluginList()
+        plugins: multiPage.getProdHtmlWebpackPluginList()
     }
 };
